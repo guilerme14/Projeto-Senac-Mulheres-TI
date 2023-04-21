@@ -1,0 +1,151 @@
+body{
+    font-size: 16px; /* Define o tamanho da fonte base */
+    background-color: white;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+    
+        background: rgb(239,161,224);
+        background: linear-gradient(90deg, rgba(239,161,224,1) 0%, rgba(191,159,255,1) 100%);
+    
+}
+footer {
+
+    grid-area: footer;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+  }
+
+header{
+    grid-area: header;
+    width: 100vw;
+    height: 25px;
+    margin: 30px;
+    font: 150% sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+
+}
+
+main{
+    grid-area: main;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.lista{
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #F6D7FA;
+    box-shadow: 0px 0px 20px rgba(216, 16, 156, 0.5);
+    animation: pulse 2s infinite;
+    overflow: auto;
+}
+
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0px 0px 0px rgba(221, 43, 102, 0.5);
+    }
+    50% {
+      box-shadow: 0px 0px 20px rgba(255, 12, 202, 0.5);
+    }
+    100% {
+      box-shadow: 0px 0px 0px rgba(228, 6, 180, 0.5);
+    }
+  }
+
+  li{
+    padding: 25px;
+    margin: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;  
+    background-color: #EF8AFF;
+    font-size: 18px; /* Reduz o tamanho da fonte */
+    font-weight: bold;
+    text-align: center;
+    max-width: 90%; /* Define uma largura máxima para o texto */
+    word-wrap: break-word; /* Quebra as palavras para evitar transbordamento */
+}
+
+  a{ 
+    font-family: sans-serif;
+    
+  }
+img{
+    height: 500px;
+    width: 500px;
+}
+a:link {
+    color:#ff0000;
+    text-decoration:none;
+  }
+
+  a:visited {
+    color:#DE1AFC;
+    
+  }
+
+  a:hover {
+    color:#000000;
+    text-decoration:underline;
+  }
+  a:active {
+    color:#00ff00;
+    text-decoration:underline;
+    background-color:#000000;
+  }
+
+
+header, main, footer {
+    max-width: 100%; /* Define a largura máxima para se adaptar a diferentes tamanhos de tela */
+    padding: 1rem; /* Adiciona espaço entre o conteúdo e as bordas */
+}
+
+@media only screen and (max-width: 600px) {
+    /* Estilos para dispositivos com largura máxima de 600px */
+    header {
+      font-size: 120%;
+    }
+  
+    main {
+      flex-direction: column;
+    }
+  
+    .lista {
+      width: 90%;
+      height: auto;
+    }
+  
+    li {
+      font-size: 100%;
+      margin: 10px;
+      padding: 10px;
+    }
+  
+    img {
+      width: 90%;
+      height: auto;
+    }
+  }
+  

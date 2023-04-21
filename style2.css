@@ -1,0 +1,112 @@
+body{
+    font-size: 16px; /* Define o tamanho da fonte base */
+    background-color: white;
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    
+    background: rgb(239,161,224);
+    background: linear-gradient(90deg, rgba(239,161,224,1) 0%, rgba(191,159,255,1) 100%);
+    
+  }
+
+  footer {
+    grid-area: footer;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+  }
+
+  header{
+    grid-area: header;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    font: 150% sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+  main{
+    grid-area: main;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lista{
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6D7FA;
+    box-shadow: 0px 0px 20px rgba(216, 16, 156, 0.5);
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0px 0px 0px rgba(221, 43, 102, 0.5);
+    }
+    50% {
+      box-shadow: 0px 0px 20px rgba(255, 12, 202, 0.5);
+    }
+    100% {
+      box-shadow: 0px 0px 0px rgba(228, 6, 180, 0.5);
+    }
+  }
+
+  li{
+    padding: 10px;
+    margin: 10px;
+    display: flex;  
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+
+  a{ 
+    font-family: sans-serif;
+  }
+
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  a:link {
+    color:#ff0000;
+    text-decoration:none;
+  }
+
+  a:visited {
+    color:#DE1AFC;
+  }
+
+  a:hover {
+    color:#000000;
+    text-decoration:underline;
+  }
+
+  a:active {
+    color:#00ff00;
+    text-decoration:underline;
+    background-color:#000000;
+  }
+
+  header, main, footer{
+    max-width: 100%; /* Define a largura máxima para se adaptar a diferentes*/
+  }
